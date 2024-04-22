@@ -1,0 +1,22 @@
+*{
+    font-family: roboto;
+}
+.password-gen-main-container{
+    border: 1px solid #dfdfdf;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 2px 4px 5px #dfdfdf;
+    width: 100%;
+
+}
+
+.pass-display{
+    resize: none;
+    font-size: 18px;
+    border: 1px solid pink;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'roboto';
+    outline: none;
+    
+}
