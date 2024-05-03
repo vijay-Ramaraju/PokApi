@@ -1,0 +1,6 @@
+.border-default{
+    border:1px solid blue;
+}
+.border-touched{
+    border:1px solid red;
+}
