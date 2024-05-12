@@ -1,0 +1,19 @@
+.mouse-handel {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.button-style {
+  border: 1px solid #dfdfdf;
+  padding: 10px;
+  background-color: #06a999;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
