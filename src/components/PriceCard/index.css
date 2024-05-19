@@ -1,0 +1,30 @@
+.notselected-card {
+  border: 1px solid #dfdfdf;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  gap: 20px;
+  /* font-weight: 600; */
+  color: #fff;
+  background-color: #ff5a5f;
+}
+.selected-card {
+  border: 3px solid blue;
+  padding: 15px;
+  border-radius: 8px;
+  /* font-weight: 500; */
+  width: 31%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00a699;
+  gap: 20px;
+}
+.macbook-styles {
+  width: 90px;
+  height: 90px;
+}
