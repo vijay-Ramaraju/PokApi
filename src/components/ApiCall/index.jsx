@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import PokeCard from "../PokeCard";
 let pokeApi = ["bulbasaur", "pikachu", "ditto"];
 
+const fruits = ["orange", "Mango", "Bannana"];
 const ApiCall = () => {
   const [apiData, setApiData] = useState(pokeApi[0]);
   const [selectedPokeData, setSelectedPokeData] = useState();
@@ -11,6 +12,7 @@ const ApiCall = () => {
     const abilitiesData = abilities
       .map((ability) => {
         return ability.ability.name;
+        k;
       })
       .join(", ");
     return {
@@ -22,22 +24,39 @@ const ApiCall = () => {
     };
   }
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch(
-          `https://pokeapi.co/api/v2/pokemon/${apiData}`
-        );
-        const data = await response.json();
-        const convertedData = arrangedData(data);
-        setSelectedPokeData(convertedData);
-      } catch (e) {
-        console.log(e.message);
-      }
-    })();
-  }, [apiData]);
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `https://pokeapi.co/api/v2/pokemon/${apiData}`
+  //       );
+  //       const data = await response.json();
+  //       // console.log(data);
 
-  console.log(selectedPokeData);
+  //       const convertedData = arrangedData(data);
+  //       setSelectedPokeData(convertedData);
+  //     } catch (e) {
+  //       // console.log(e.message);
+  //     }
+  //   })();
+  // }, [apiData]);
+
+  function animation(animate) {
+    setTimeout(() => {
+      animate(fruits[0]);
+      setTimeout(() => {
+        animate(fruits[1]);
+      }, 1000);
+      setTimeout(() => {
+        animate(fruits[2]);
+      }, 1000);
+    }, 1000);
+  }
+
+  function animate(fruit) {
+    console.log(fruit);
+  }
+  animation(animate);
   return (
     <div
       style={{
@@ -53,20 +72,20 @@ const ApiCall = () => {
         gap: "1rem",
       }}
     >
-      <select onChange={(e) => setApiData(e.target.value)}>
+      {/* <select onChange={(e) => setApiData(e.target.value)}>
         {pokeApi.map((name) => (
           <option value={name}>{name}</option>
         ))}
-      </select>
+      </select> */}
       {/* <PokeCard selectedPokeData={selectedPokeData} />
        */}
 
-      <div key={selectedPokeData?.id}>
-        <p>{selectedPokeData?.name}</p>
-        <p>Height: {selectedPokeData?.height}</p>
-        <p>Weight: {selectedPokeData?.weight}</p>
-        <p>Abilities: {selectedPokeData?.abilitiesData}</p>
-      </div>
+      {/* <div key={selectedPokeData?.id}>
+          <p>{selectedPokeData?.name}</p>
+          <p>Height: {selectedPokeData?.height}</p>
+          <p>Weight: {selectedPokeData?.weight}</p>
+          <p>Abilities: {selectedPokeData?.abilitiesData}</p>
+        </div> */}
     </div>
   );
 };
