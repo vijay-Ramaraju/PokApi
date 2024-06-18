@@ -9,6 +9,7 @@ import StateAssign from "./components/StateAssign";
 import Macbook from "./components/Macbook";
 import MouseTracking from "./components/MouseTracking";
 import ApiCall from "./components/ApiCall";
+import UseRef from './components/UseRef'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,7 +22,7 @@ function App() {
       {/* <StateAssign /> */}
       {/* < Macbook /> */}
       {/* <MouseTracking /> */}
-      <ApiCall />
+      <UseRef />
     </>
   );
 }
